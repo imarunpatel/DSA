@@ -5,6 +5,9 @@ public class Main {
         LinkedList list = new LinkedList();
         list.insert(0);
         list.insert(9);
+        list.insert(4);
+        list.insert(5);
+        list.reverse();
         list.display();
     }
 }
