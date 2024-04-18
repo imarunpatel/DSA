@@ -8,6 +8,14 @@ class LinkedList {
         this.head = null;
     }
 
+    void length(Node current, int count) {
+        if(current == null) {
+            System.out.println(count);
+            return;
+        }
+        length(current.next, count+1);
+    }
+
     void insert(int data) {
         Node newNode = new Node(data);
 

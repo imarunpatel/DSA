@@ -7,7 +7,8 @@ public class Main {
         list.insert(9);
         list.insert(4);
         list.insert(5);
-        list.reverse();
-        list.display();
+        list.length(list.head, 0);
+//        list.reverse();
+//        list.display();
     }
 }
