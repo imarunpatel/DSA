@@ -7,7 +7,7 @@ public class MergeSortedListRecursive {
         this.head = null;
     }
 
-    class Node {
+    static class Node {
         int data;
         Node next;
         Node(int data) {
@@ -39,6 +39,7 @@ public class MergeSortedListRecursive {
         }
     }
 
+//    Merging two sorted linked list recursively
     static Node mergeTwoList(Node list1, Node list2) {
         if(list1 == null) {
             return list2;
@@ -57,6 +58,28 @@ public class MergeSortedListRecursive {
         }
     }
 
+// Merge two sorted linked list iterative
+
+    static Node mergeTwoList2(Node list1, Node list2) {
+        Node prev = new Node(-1);
+        Node curr = prev;
+
+        while(list1 != null && list2 != null) {
+            if(list1.data < list2.data) {
+                curr.next = list1;
+                list1 = list1.next;
+            } else {
+                curr.next = list2;
+                list2 = list2.next;
+            }
+            curr  = curr.next;
+        }
+
+        curr.next = list1 == null ? list2 : list1;
+
+        return prev.next;
+    }
+
 
     public  static void main(String[] args) {
         MergeSortedListRecursive list1 = new MergeSortedListRecursive();
@@ -72,8 +95,7 @@ public class MergeSortedListRecursive {
         list2.insert(5);
         list2.insert(7);
 
-        Node merged = mergeTwoList(list1.head, list2.head);
-
+        Node merged = mergeTwoList2(list1.head, list2.head);
         display(merged);
 
     }

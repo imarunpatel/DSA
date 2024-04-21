@@ -86,6 +86,7 @@ public class MergeTwoSortedList {
             }
         }
 
+
         while(list1 != null) {
             list.insert(list1.data);
             list1 = list1.next;
