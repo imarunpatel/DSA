@@ -61,6 +61,7 @@ public class MergeTwoSortedList {
         list1.insert(1);
         list1.insert(4);
 
+        list2.insert(-1);
         list2.insert(3);
         list2.insert(9);
         list2.insert(34);
