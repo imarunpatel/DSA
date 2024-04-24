@@ -1,4 +1,4 @@
-package Java.polymorphism.strings;
+package Java.strings;
 
 
 class Human {
